@@ -16,7 +16,7 @@ import { PhotoService } from './services/photo.service';
     PhotoList
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
     FormsModule,
     HttpModule
   ],
