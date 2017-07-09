@@ -19,4 +19,7 @@ public class Comment {
 	@ManyToOne
 	@JsonIgnore
 	private Photo photo;
+	private Long photoId;
+	private String userName;
+	
 }
