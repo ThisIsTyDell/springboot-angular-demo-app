@@ -11,4 +11,6 @@ public class Comment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long commentId;
+	private String content;
+
 }
