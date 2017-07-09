@@ -1,5 +1,8 @@
 package com.tymiller.model;
 
-public class Comment {
+import javax.persistence.Entity;
 
+@Entity
+public class Comment {
+	
 }
