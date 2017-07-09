@@ -12,10 +12,13 @@ import { PhotoService } from './services/photo.service';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PhotoList
   ],
   imports: [
     BrowserModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
