@@ -20,7 +20,7 @@ import { PhotoService } from './services/photo.service';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PhotoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
