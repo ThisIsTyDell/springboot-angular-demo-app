@@ -1,12 +1,15 @@
 package com.tymiller.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -29,4 +32,9 @@ public class Photo {
 	@ManyToOne
 	@JsonBackReference
 	private User user;
+	
+	private int likes;
+	
+	@OneToMany(mappedBy = "photo", fetch=FetchType.EAGER)
+	private List<Comment> commentList;
 }
