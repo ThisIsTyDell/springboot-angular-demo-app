@@ -6,8 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Photo {
@@ -22,4 +25,8 @@ public class Photo {
 	
 	@CreationTimestamp
 	private Date created;
+	
+	@ManyToOne
+	@JsonBackReference
+	private User user;
 }
