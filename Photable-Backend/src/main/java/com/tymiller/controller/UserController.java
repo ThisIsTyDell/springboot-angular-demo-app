@@ -16,7 +16,7 @@ public class UserController {
 	
 	public String login() {}
 	
-	@RequestMapping(value="/register" method = RequestMethod.POST)	
+	@RequestMapping(value="/register", method = RequestMethod.POST)	
 	public User registerUser(@RequestBody User user) {
 		
 	}
