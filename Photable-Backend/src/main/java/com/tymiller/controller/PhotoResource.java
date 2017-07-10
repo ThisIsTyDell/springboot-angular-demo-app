@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.tymiller.model.Photo;
 import com.tymiller.model.User;
+import com.tymiller.service.PhotoService;
 
 @RestController
 @RequestMapping("/rest")
