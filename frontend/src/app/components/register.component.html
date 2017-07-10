@@ -29,4 +29,8 @@
 
     <button type="submit" class="ui button" [disabled]="!registerForm.form.valid">Register</button>
   </form>
+
+  <div *ngIf="registered">
+    <h1>Register Success!</h1>    
+  </div>
 </div>
