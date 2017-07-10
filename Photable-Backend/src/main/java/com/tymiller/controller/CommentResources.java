@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tymiller.model.Comment;
 import com.tymiller.model.Photo;
+import com.tymiller.service.CommentService;
 import com.tymiller.service.PhotoService;
 
 @RestController
