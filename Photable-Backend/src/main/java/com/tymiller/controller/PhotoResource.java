@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.tymiller.model.Photo;
+import com.tymiller.model.User;
 
 @RestController
 @RequestMapping("/rest")
@@ -53,4 +54,11 @@ public class PhotoResource {
 		photo.setImageName(imageName);
 		return photoService.save(photo);
 	}
+	
+	@RequestMapping(value="/photo/user", method = RequestMethod.POST)
+	public Lict<Photo> getPhotosByUser(@RequestBody User user) {
+		return photoService.findByUser(user);
+	}
 }
+
+
