@@ -3,6 +3,7 @@ package com.tymiller.controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -57,13 +58,13 @@ public class PhotoResource {
 	}
 	
 	@RequestMapping(value="/photo/user", method = RequestMethod.POST)
-	public Lict<Photo> getPhotosByUser(@RequestBody User user) {
+	public List<Photo> getPhotosByUser(@RequestBody User user) {
 		return photoService.findByUser(user);
 	}
 	
 	@RequestMapping(value="/photo/photoId", method = RequestMethod.POST)
-	public Lict<Photo> getPhotosByPhotoId(@RequestBody Long photoId) {
-		return photoService.findByUser(photoId);
+	public Photo getPhotosByPhotoId(@RequestBody Long photoId) {
+		return photoService.findByPhotoId(photoId);
 	}
 	
 	@RequestMapping(value="/photo/update", method = RequestMethod.POST)
