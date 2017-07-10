@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.tymiller.dao.PhotoDao;
 import com.tymiller.model.Photo;
 import com.tymiller.model.User;
 import com.tymiller.service.PhotoService;
