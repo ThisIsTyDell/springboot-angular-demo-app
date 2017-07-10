@@ -2,34 +2,33 @@ package com.tymiller.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.tymiller.model.Photo;
 import com.tymiller.model.User;
 import com.tymiller.service.PhotoService;
 
+@Service
 public class PhotoServiceImpl implements PhotoService {
 
-	@Override
+	@Autowired
+	private PhotoDao photoDao;
+	
 	public Photo save(Photo photo) {
-		// TODO Auto-generated method stub
-		return null;
+		return photoDao.save(photo);
 	}
 
-	@Override
 	public List<Photo> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return photoDao.findAll();
 	}
 
-	@Override
 	public List<Photo> findByUser(User user) {
-		// TODO Auto-generated method stub
-		return null;
+		return photoDao.findByUser(user);
 	}
 
-	@Override
 	public Photo findByPhotoId(Long photoId) {
-		// TODO Auto-generated method stub
-		return null;
+		return photoDao.findByPhotoId(photoId);
 	}
 
 }
