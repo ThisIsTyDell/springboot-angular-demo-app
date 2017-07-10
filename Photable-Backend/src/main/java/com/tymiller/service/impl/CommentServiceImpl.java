@@ -18,13 +18,15 @@ public class CommentServiceImpl implements CommentService {
 	public Comment save(Comment comment) {
 		return commentDao.save(comment);
 	}
-
-	public List<Comment> findByPhotoId(Long photoId) {
+	
+	public Comment findOne(Long commentId) {
 		return commentDao.findOne(commentId);
 	}
 
-	public Comment findOne(Long commentId) {
+	public List<Comment> findByPhotoId(Long photoId) {
 		return commentDao.findByPhotoId(photoId);
 	}
+
+	
 
 }
