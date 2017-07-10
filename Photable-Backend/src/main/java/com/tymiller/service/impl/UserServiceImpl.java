@@ -10,6 +10,9 @@ import com.tymiller.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
+	@Autowired
+	private UserDao userDao;
+	
 	@Override
 	public List<User> findAllUsers() {
 		// TODO Auto-generated method stub
