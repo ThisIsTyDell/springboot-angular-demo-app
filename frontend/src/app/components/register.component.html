@@ -12,5 +12,19 @@
         </div>
       </div>
     </div>
+    <div class="field">
+      <label>* Username/Password</label>
+      <div class="three fields">
+        <div class="field">
+          <input type="text" name="userName" placeholder="User Name" [(ngModel)]="newUser.userName" ngControl="userName" required>
+        </div>
+        <div class="field">
+          <input type="password" name="password" placeholder="Password" [(ngModel)]="newUser.password" ngControl="password1" required>
+        </div>
+        <div class="field">
+          <input type="password" name="password" placeholder="Password Again" ngControl="password2" required>
+        </div>
+      </div>
+    </div>
   </form>
 </div>
