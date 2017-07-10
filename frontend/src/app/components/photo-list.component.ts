@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {PhotoService} from '../services/photo.service';
 import {User} from '../models/user';
 import {Photo} from '../models/photo';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'photo-list',
@@ -17,5 +18,10 @@ export class PhotoList {
         JSON.stringify(data))._body)),
       error => console.log(error)
     );
+  }
+
+  onSelect(photo:Photo) {
+    this.selectedPhoto = photo;
+    this.router.navigate(['/image-detail', this.selectedPhoto.photoId]);
   }
 }
