@@ -5,7 +5,7 @@ import java.util.List;
 import com.tymiller.model.Photo;
 import com.tymiller.model.User;
 
-public class PhotoService {
+public interface PhotoService {
 	Photo save(Photo photo);
 	
 	List<Photo> findAll();
