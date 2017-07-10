@@ -64,6 +64,13 @@ public class PhotoResource {
 	public Lict<Photo> getPhotosByPhotoId(@RequestBody Long photoId) {
 		return photoService.findByUser(photoId);
 	}
+	
+	@RequestMapping(value="/photo/update", method = RequestMethod.POST)
+	public void updatePhoto(@RequestBody Photo photo) {
+		Photo currentPhoto = photoService.findByPhotoId(photo.getPhotoId());
+		currentPhoto.setLikes(photo.getLikes());
+		photoService.save(currentPhoto);
+	}
 }
 
 
