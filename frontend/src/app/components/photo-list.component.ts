@@ -12,7 +12,7 @@ export class PhotoList {
   photos: Photo[];
   selectedPhoto: Photo;
 
-  constructor (private photoService: PhotoService) {
+  constructor (private photoService: PhotoService, private router: Router) {
     this.photoService.getPhotos().subscribe(
       data => console.log(this.photos = JSON.parse(JSON.parse(
         JSON.stringify(data))._body)),
