@@ -15,18 +15,15 @@ public class CommentServiceImpl implements CommentService {
 	private CommentDao commentDao;
 	
 	public Comment save(Comment comment) {
-		// TODO Auto-generated method stub
-		return null;
+		return commentDao.save(comment);
 	}
 
 	public List<Comment> findByPhotoId(Long photoId) {
-		// TODO Auto-generated method stub
-		return null;
+		return commentDao.findOne(commentId);
 	}
 
 	public Comment findOne(Long commentId) {
-		// TODO Auto-generated method stub
-		return null;
+		return commentDao.findByPhotoId(photoId);
 	}
 
 }
