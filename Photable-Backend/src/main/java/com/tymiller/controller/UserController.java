@@ -16,7 +16,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	public String login() {}
+//	public String login() {}
 	
 	@RequestMapping(value="/register", method = RequestMethod.POST)	
 	public User registerUser(@RequestBody User user) {
