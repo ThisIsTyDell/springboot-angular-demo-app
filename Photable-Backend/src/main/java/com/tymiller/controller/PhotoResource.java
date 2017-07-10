@@ -8,11 +8,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+import com.tymiller.model.Photo;
 
 @RestController
 @RequestMapping("/rest")
@@ -43,5 +46,11 @@ public class PhotoResource {
 		}
 		
 		return "Upload Success!";
+	}
+	
+	@RequestMapping(value="/photo/add", method = RequestMethod.POST)
+	public Photo addPhoto(@RequestBody Photo photo) {
+		photo.setImageName(imageName);
+		return photoService.save(photo);
 	}
 }
