@@ -31,7 +31,10 @@ public class PhotoResource {
 		String fileName = multipartFile.getOriginalFilename();
 		imageName=fileName;
 		
-		String path = new File("target/classes/static/images").getAbsolutePath() + "\\" + fileName;
+		String path = new File("target" + File.separator
+							  + "classes" + File.separator
+							  +"static" + File.separator
+							  + "images").getAbsolutePath() + File.separator + fileName;
 		try {
 			multipartFile.transferTo(new File(path));
 			System.out.println(path);
