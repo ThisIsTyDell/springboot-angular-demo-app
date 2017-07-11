@@ -416,7 +416,7 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/components/image-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"pusher\">\n  <div class=\"ui inverted vertical masthead segment\">\n    <div class=\"ui text container\">\n\n      <div class=\"center aligned\">\n        <img src=\"http://localhost:8080/images/{{photo.imageName}}\" class=\"ui image massive centered\" />\n      </div>\n      <br>\n      <div class=\"ui grid\">\n      <div class=\"left floated six wide column \" style=\"cursor: pointer; color: gray;\">\n        <i class=\"long arrow left icon\"></i><span (click)=\"goBack()\">Back</span>\n      </div>\n      <div class=\"right floated right aligned six wide column\" style=\"color: gray;\">\n        <i class=\"thumbs outline up icon\"></i> {{photo.likes}}\n        &nbsp;&nbsp;<a style=\"cursor: pointer\" (click)=\"likeDisplay()\">{{like}}</a>\n      </div>\n    </div>\n    </div>\n  </div>\n</div>\n\n<div>\n  <image-comments [photo]=\"photo\"></image-comments>\n</div>\n"
+module.exports = "<div class=\"pusher\">\n  <div class=\"ui inverted vertical masthead segment\">\n    <div class=\"ui text container\">\n\n      <div class=\"center aligned\">\n        <img src=\"https://whispering-coast-92817.herokuapp.com/images/{{photo.imageName}}\" class=\"ui image massive centered\" />\n      </div>\n      <br>\n      <div class=\"ui grid\">\n      <div class=\"left floated six wide column \" style=\"cursor: pointer; color: gray;\">\n        <i class=\"long arrow left icon\"></i><span (click)=\"goBack()\">Back</span>\n      </div>\n      <div class=\"right floated right aligned six wide column\" style=\"color: gray;\">\n        <i class=\"thumbs outline up icon\"></i> {{photo.likes}}\n        &nbsp;&nbsp;<a style=\"cursor: pointer\" (click)=\"likeDisplay()\">{{like}}</a>\n      </div>\n    </div>\n    </div>\n  </div>\n</div>\n\n<div>\n  <image-comments [photo]=\"photo\"></image-comments>\n</div>\n"
 
 /***/ }),
 
@@ -573,7 +573,7 @@ var _a;
 /***/ "../../../../../src/app/components/my-album.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class='photo-list'>\n    <div clas=\"ui grid\">\n       <div class=\"ui horizontal segments\" >\n         <span *ngFor=\"let photo of photos\" >\n           <div class=\"ui segment\">\n             <img src='http://localhost:8080/images/{{photo.imageName}}' class='ui medium image' (click)=\"onSelect(photo)\" style=\"cursor: pointer\">\n             <div class=\"ui grid\">\n                 <div class=\"twelve wide column left aligned\">\n                     <strong>{{photo.title}}</strong><br/>\n                 </div>\n                 <div class=\"four wide column right aligned\">\n                   {{photo.likes}} Likes\n                 </div>\n             </div>\n           </div>\n         </span>\n        </div>\n      </div>\n\n      <a class=\"ui button\" routerLink=\"/add-photo\" routerLinkActive=\"active\">Add Photo</a>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class='photo-list'>\n    <div clas=\"ui grid\">\n       <div class=\"ui horizontal segments\" >\n         <span *ngFor=\"let photo of photos\" >\n           <div class=\"ui segment\">\n             <img src='https://whispering-coast-92817.herokuapp.com/images/{{photo.imageName}}' class='ui medium image' (click)=\"onSelect(photo)\" style=\"cursor: pointer\">\n             <div class=\"ui grid\">\n                 <div class=\"twelve wide column left aligned\">\n                     <strong>{{photo.title}}</strong><br/>\n                 </div>\n                 <div class=\"four wide column right aligned\">\n                   {{photo.likes}} Likes\n                 </div>\n             </div>\n           </div>\n         </span>\n        </div>\n      </div>\n\n      <a class=\"ui button\" routerLink=\"/add-photo\" routerLinkActive=\"active\">Add Photo</a>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -685,7 +685,7 @@ var _a;
 /***/ "../../../../../src/app/components/photo-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"photo-list\">\n  <!-- <div *ngFor=\"#user of users\"> -->\n    <div *ngFor=\"let photo of photos\">\n      <div class=\"ui grid\">\n        \n        <div class=\"two wide column\">\n        </div>\n\n        <div class=\"fourteen wide column\">\n          <div class=\"ui raised segment\">\n            \n            <img src=\"http://localhost:8080/images/{{photo.imageName}}\" class=\"ui image big centered\" (click)=\"onSelect(photo)\" style=\"cursor:pointer\">\n\n            <div class=\"ui center aligned grid\">\n              <div class=\"column twelve wide\">\n                <div class=\"ui grid\">\n                  <div class=\"four column row\">\n                    <div class=\"left floated column left aligned\">\n                      <strong>{{photo.title}}</strong><br/>\n                      {{photo.description}}\n                    </div>\n                    <div class=\"right floated column right aligned\">\n                      {{photo.likes}} &nbsp;Likes\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  <!-- </div> -->\n</div>\n"
+module.exports = "<div class=\"photo-list\">\n  <!-- <div *ngFor=\"#user of users\"> -->\n    <div *ngFor=\"let photo of photos\">\n      <div class=\"ui grid\">\n        \n        <div class=\"two wide column\">\n        </div>\n\n        <div class=\"fourteen wide column\">\n          <div class=\"ui raised segment\">\n            \n            <img src=\"https://whispering-coast-92817.herokuapp.com/images/{{photo.imageName}}\" class=\"ui image big centered\" (click)=\"onSelect(photo)\" style=\"cursor:pointer\">\n\n            <div class=\"ui center aligned grid\">\n              <div class=\"column twelve wide\">\n                <div class=\"ui grid\">\n                  <div class=\"four column row\">\n                    <div class=\"left floated column left aligned\">\n                      <strong>{{photo.title}}</strong><br/>\n                      {{photo.description}}\n                    </div>\n                    <div class=\"right floated column right aligned\">\n                      {{photo.likes}} &nbsp;Likes\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  <!-- </div> -->\n</div>\n"
 
 /***/ }),
 
@@ -738,7 +738,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/photo-row.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let photo of photoListRanked\">\n  <div class=\"ui grid\">\n    <div class=\"ten wide column\">\n      <img src=\"http://localhost:8080/images/{{photo.imageName}}\" class=\"ui image small centered\" >\n    </div>\n    <div class=\"six wide column\">\n      <br />\n      <p class=\"ui centered\">{{ photo.likes }} likes</p>\n      <p class=\"ui\">{{ photo.title }}</p>\n    </div>\n  </div>\n  <div class=\"ui divider\">\n  </div>\n</div>"
+module.exports = "<div *ngFor=\"let photo of photoListRanked\">\n  <div class=\"ui grid\">\n    <div class=\"ten wide column\">\n      <img src=\"https://whispering-coast-92817.herokuapp.com/images/{{photo.imageName}}\" class=\"ui image small centered\" >\n    </div>\n    <div class=\"six wide column\">\n      <br />\n      <p class=\"ui centered\">{{ photo.likes }} likes</p>\n      <p class=\"ui\">{{ photo.title }}</p>\n    </div>\n  </div>\n  <div class=\"ui divider\">\n  </div>\n</div>"
 
 /***/ }),
 
@@ -969,7 +969,7 @@ var AddPhotoService = (function () {
         this.http = http;
     }
     AddPhotoService.prototype.sendPhoto = function (photo) {
-        var url = "http://localhost:8080/rest/photo/add";
+        var url = "https://whispering-coast-92817.herokuapp.com/rest/photo/add";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
         console.log(url);
         return this.http.post(url, JSON.stringify(photo), { headers: headers1 });
@@ -1009,7 +1009,7 @@ var CommentService = (function () {
         this.http = http;
     }
     CommentService.prototype.addComment = function (comment) {
-        var tokenUrl1 = "http://localhost:8080/rest/comment/add";
+        var tokenUrl1 = "https://whispering-coast-92817.herokuapp.com/rest/comment/add";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
         console.log(JSON.stringify(comment));
         return this.http.post(tokenUrl1, JSON.stringify(comment), { headers: headers1 });
@@ -1049,12 +1049,12 @@ var LoginService = (function () {
         this.http = http;
     }
     LoginService.prototype.sendCredential = function (model) {
-        var tokenUrl1 = "http://localhost:8080/user/login";
+        var tokenUrl1 = "https://whispering-coast-92817.herokuapp.com/user/login";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
         return this.http.post(tokenUrl1, JSON.stringify(model), { headers: headers1 });
     };
     LoginService.prototype.sendToken = function (token) {
-        var tokenUrl2 = "http://localhost:8080/rest/user/users";
+        var tokenUrl2 = "https://whispering-coast-92817.herokuapp.com/rest/user/users";
         console.log('Bearer ' + token);
         var getHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Authorization': 'Bearer ' + token });
         return this.http.get(tokenUrl2, { headers: getHeaders });
@@ -1109,21 +1109,21 @@ var PhotoService = (function () {
         this.http = http;
     }
     PhotoService.prototype.getPhotos = function () {
-        var url = "http://localhost:8080/photo/allPhotos";
+        var url = "https://whispering-coast-92817.herokuapp.com/photo/allPhotos";
         return this.http.get(url);
     };
     PhotoService.prototype.getPhotoById = function (photoId) {
-        var tokenUrl1 = "http://localhost:8080/rest/photo/photoId";
+        var tokenUrl1 = "https://whispering-coast-92817.herokuapp.com/rest/photo/photoId";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
         return this.http.post(tokenUrl1, JSON.stringify(photoId), { headers: headers1 });
     };
     PhotoService.prototype.getPhotosByUser = function (user) {
-        var tokenUrl1 = "http://localhost:8080/rest/photo/user";
+        var tokenUrl1 = "https://whispering-coast-92817.herokuapp.com/rest/photo/user";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
         return this.http.post(tokenUrl1, JSON.stringify(user), { headers: headers1 });
     };
     PhotoService.prototype.updatePhoto = function (photo) {
-        var tokenUrl1 = "http://localhost:8080/rest/photo/update";
+        var tokenUrl1 = "https://whispering-coast-92817.herokuapp.com/rest/photo/update";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
         return this.http.post(tokenUrl1, JSON.stringify(photo), { headers: headers1 });
     };
@@ -1162,7 +1162,7 @@ var RegisterService = (function () {
         this.http = http;
     }
     RegisterService.prototype.sendUser = function (user) {
-        var url = "http://localhost:8080/user/register";
+        var url = "https://whispering-coast-92817.herokuapp.com/user/register";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
         return this.http.post(url, JSON.stringify(user), { headers: headers1 });
     };
@@ -1199,7 +1199,7 @@ var UploadPhotoService = (function () {
         this.filesToUpload = [];
     }
     UploadPhotoService.prototype.upload = function () {
-        this.makeFileRequest("http://localhost:8080/rest/photo/upload", [], this.filesToUpload).then(function (result) {
+        this.makeFileRequest("https://whispering-coast-92817.herokuapp.com/rest/photo/upload", [], this.filesToUpload).then(function (result) {
             console.log(result);
         }, function (error) {
             console.error(error);
@@ -1268,12 +1268,12 @@ var UserService = (function () {
     UserService.prototype.getUserById = function (id) {
     };
     UserService.prototype.getUserByName = function (username) {
-        var tokenUrl = "http://localhost:8080/rest/user/userName";
+        var tokenUrl = "https://whispering-coast-92817.herokuapp.com/rest/user/userName";
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
         return this.http.post(tokenUrl, username, { headers: headers });
     };
     UserService.prototype.updateUser = function (user) {
-        var tokenUrl1 = "http://localhost:8080/rest/user/update";
+        var tokenUrl1 = "https://whispering-coast-92817.herokuapp.com/rest/user/update";
         var headers1 = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem("token") });
         return this.http.post(tokenUrl1, JSON.stringify(user), { headers: headers1 });
     };
