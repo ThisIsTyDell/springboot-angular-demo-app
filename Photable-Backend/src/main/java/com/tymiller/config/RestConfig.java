@@ -15,7 +15,7 @@ public class RestConfig {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
 		config.setAllowCredentials(true); // you USUALLY want this
-		config.addAllowedOrigin("*");
+		config.addAllowedOrigin("http://localhost:4200");
 		config.addAllowedHeader("*");
 		config.addAllowedMethod("GET");
 		config.addAllowedMethod("PUT");
